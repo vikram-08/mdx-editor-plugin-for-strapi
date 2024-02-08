@@ -1,9 +1,9 @@
 {
-  "name": "strapi-mdx-editor",
+  "name": "mdx-editor",
   "version": "0.0.0",
   "description": "This is the description of the plugin.",
   "strapi": {
-    "name": "strapi-mdx-editor",
+    "name": "mdx-editor",
     "description": "Description of Strapi Mdx Editor plugin",
     "kind": "plugin",
     "displayName": "Strapi Mdx Editor"
@@ -24,7 +24,8 @@
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0",
     "react-router-dom": "^5.2.0",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "@mdxeditor/editor": "^2.8.2"
   },
   "author": {
     "name": "A Strapi developer"

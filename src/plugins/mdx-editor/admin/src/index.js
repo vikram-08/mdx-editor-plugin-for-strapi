@@ -8,6 +8,30 @@ const name = pluginPkg.strapi.name;
 
 export default {
   register(app) {
+    app.customFields.register({
+      name: "mdx-editor",
+      pluginId: "mdx-editor", // the custom field is created by a color-picker plugin
+      type: "string", // the color will be stored as a string
+      intlLabel: {
+        id: "mdx-editor.label",
+        defaultMessage: "MDX Editor",
+      },
+      intlDescription: {
+        id: "mdx-editor.description",
+        defaultMessage: "# Hello",
+      },
+      icon: '', // don't forget to create/import your icon component
+      components: {
+        Input: async () =>
+          import(
+             "./components/MDXEditor.js"
+          ),
+      },
+      options: {
+        // declare options here
+      },
+    });
+
     app.addMenuLink({
       to: `/plugins/${pluginId}`,
       icon: PluginIcon,

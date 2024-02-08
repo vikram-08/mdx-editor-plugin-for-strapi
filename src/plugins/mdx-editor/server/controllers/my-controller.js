@@ -3,7 +3,7 @@
 module.exports = ({ strapi }) => ({
   index(ctx) {
     ctx.body = strapi
-      .plugin('strapi-mdx-editor')
+      .plugin('mdx-editor')
       .service('myService')
       .getWelcomeMessage();
   },
