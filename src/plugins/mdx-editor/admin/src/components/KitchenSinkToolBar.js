@@ -18,7 +18,7 @@ import {
   ListsToggle,
   ShowSandpackInfo,
   UndoRedo,
-  CreateLink,
+  CreateLink
 } from "@mdxeditor/editor";
 
 function whenInAdmonition(editorInFocus) {

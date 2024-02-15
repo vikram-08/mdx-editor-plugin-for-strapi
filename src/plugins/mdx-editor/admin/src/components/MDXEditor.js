@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import {
   MDXEditor,
   AdmonitionDirectiveDescriptor,
@@ -20,12 +20,14 @@ import {
   codeBlockPlugin,
   noop
 } from "@mdxeditor/editor";
-import KitchenSinkToolbar from "./KitchenSinkToolBar";
+import KitchenSinkToolbar from "./KitchenSinkToolBar.js";
 import "@mdxeditor/editor/style.css";
 
 import { useIntl } from "react-intl";
 
+// @ts-ignore
 const Input = React.forwardRef((props, ref) => {
+  // @ts-ignore
   const { intlLabel, onChange } = props; // these are just some of the props passed by the content-manager
 
   const { formatMessage } = useIntl();
@@ -77,11 +79,15 @@ export default function App() {
           headingsPlugin(),
           linkPlugin(),
           linkDialogPlugin({
+            // @ts-ignore
             linkAutocompleteSuggestions: '',
           }),
           imagePlugin({
+            // @ts-ignore
             imageAutocompleteSuggestions: '',
+            // @ts-ignore
             imagePreviewHandler: noop,
+            // @ts-ignore
             imageUploadHandler: noop,
             disableImageResize: true
           }),
@@ -105,6 +111,7 @@ export default function App() {
           directivesPlugin({ directiveDescriptors: [AdmonitionDirectiveDescriptor] }),
           diffSourcePlugin(),
           markdownShortcutPlugin(),
+          // @ts-ignore
           sandpackPlugin({ sandpackConfig: sandpackConfig }),
         ]}
         onChange={handleChange}
